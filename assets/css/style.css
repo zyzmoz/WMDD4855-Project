@@ -1,0 +1,39 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: teal;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  /* visibility: hidden; */
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  background-color: rgba(0, 128, 128, 0.8);
+  color: white;
+  transition: height 0.5s linear 0.5s;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #333;
+}
+
+#mobileMenu,
+#search {
+  color: white;
+  font-size: 2em;
+  padding: 1rem;
+}

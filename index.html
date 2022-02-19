@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./assets/css/reset.css">
-</head>
-<body>
-  <!-- Navbar -->
-  <div id="root"></div>
-  <script src="./scripts/routerEngine.js"></script>
-  <script src="./scripts/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a912a71dd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <i id="mobileMenu" class="fas fa-bars"></i>
+      <nav id="menu">
+        <ul>
+          <li>Search Books</li>
+          <li>Library</li>
+          <li>Wishlist</li>
+        </ul>
+      </nav>
+      <i id="search" class="fas fa-search"></i>
+    </header>
+
+    <div id="root"></div>
+    <script src="./scripts/routerEngine.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
