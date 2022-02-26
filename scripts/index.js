@@ -1,4 +1,8 @@
-const routes = [new Route("#main", "pages/main.html", `scripts/mainPage.js`)];
+const routes = [
+  new Route("#login", "pages/login.html", `scripts/loginPage.js`),
+  new Route("#register", "pages/register.html", `scripts/registerPage.js`),
+  new Route("#main", "pages/main.html", `scripts/mainPage.js`),
+];
 
 Router.init("root", routes);
 

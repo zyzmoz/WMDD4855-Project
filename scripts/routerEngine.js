@@ -18,9 +18,10 @@ class Router {
 
   static async render() {
     const pageHash = window.location.hash;
-    if (pageHash.trim() > 0) {
+    if (pageHash.trim().length > 0) {
       const routeObj = Router.pages.find((page) => page.pageId === pageHash);
       const pageHtml = await (await fetch(routeObj.htmlPath)).text();
+      console.log({routeObj})
       Router.renderElement.innerHTML = pageHtml;
       Router.createController(routeObj.controller);
     } else {
