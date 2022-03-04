@@ -1,29 +1,45 @@
-const fetchUser = async (userId) => {
+const fetchUser = async (email) => {
   const res = await fetch(`https://elvnforge.herokuapp.com/graphql`, {
     headers: {
       "Content-Type": "application/json",
     },
     method: "POST",
     body: JSON.stringify({
-      query: `query user($id: String!){
-        user: findOneUsers(_id: $id){
+      query: `query user($email: String!){
+        user: findOneUsers(email: $email){
           _id
           name
-        }
-        user_reviews: findAllReviews(user_id: $id){
-          review
-          score
-        }
-        user_books: findAllShelves(user_id: $id){
-          book_id
-          review
+          email
         }
       }
     `,
       variables: {
-        id: userId,
+        email: email,
       },
     }),
   });
-  console.log(await res.json());
+  return parseHttpResponse(await res.json());
+};
+
+const createUser = async (username, email) => {
+  const res = await fetch(`https://elvnforge.herokuapp.com/graphql`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({
+      query: `mutation createUser($name: String!, $email: String!) {
+        createUsers(name: $name, email: $email){
+          email
+        }
+      }
+      
+    `,
+      variables: {
+        name: username,
+        email: email,
+      },
+    }),
+  });
+  return parseHttpResponse(await res.json());
 };

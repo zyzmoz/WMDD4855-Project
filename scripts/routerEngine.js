@@ -18,7 +18,9 @@ class Router {
 
   static async render() {
     const pageHash = window.location.hash;
-    if (pageHash.trim().length > 0) {
+    const authenticated = localStorage.getItem('authenticated')
+    console.log({authenticated})
+    if ((pageHash.trim().length > 0 && authenticated) || (pageHash === "#register" || pageHash === "#login")) {
       const routeObj = Router.pages.find((page) => page.pageId === pageHash);
       const pageHtml = await (await fetch(routeObj.htmlPath)).text();
       console.log({routeObj})

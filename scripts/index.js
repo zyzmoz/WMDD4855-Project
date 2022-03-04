@@ -14,3 +14,7 @@ mobileMenu.addEventListener("click", () => {
     menu.style.display = "none";
   }
 });
+
+logoutButton.addEventListener('click', () => {
+  logout()
+})

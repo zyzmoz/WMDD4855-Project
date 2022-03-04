@@ -17,6 +17,26 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAylroDVIyxYIdzKfxXgMQfXCu9PIS-ehE",
+        authDomain: "wmmd4855poject.firebaseapp.com",
+        projectId: "wmmd4855poject",
+        storageBucket: "wmmd4855poject.appspot.com",
+        messagingSenderId: "604877791017",
+        appId: "1:604877791017:web:956146cdfd1c3ad4e5e138",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./scripts/utils/utils.js"></script>
+    <script src="./scripts/apis/authApi.js"></script>
+    <script src="./scripts/apis/dataApi.js"></script>
+    <script src="./scripts/apis/openLibraryApi.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -27,6 +47,7 @@
           <li>Search Books</li>
           <li>Library</li>
           <li>Wishlist</li>
+          <li id="logoutButton">Log out</li>
         </ul>
       </nav>
       <i id="search" class="fas fa-search"></i>
@@ -34,7 +55,6 @@
 
     <div id="root"></div>
     <script src="./scripts/routerEngine.js"></script>
-    <script src="./scripts/apis/dataApi.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" defer></script>
   </body>
 </html>
