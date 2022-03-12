@@ -2,6 +2,7 @@ const routes = [
   new Route("#login", "pages/login.html", `scripts/loginPage.js`),
   new Route("#register", "pages/register.html", `scripts/registerPage.js`),
   new Route("#main", "pages/main.html", `scripts/mainPage.js`),
+  new Route("#search", "pages/search.html", `scripts/searchPage.js`),
 ];
 
 Router.init("root", routes);
@@ -17,4 +18,14 @@ mobileMenu.addEventListener("click", () => {
 
 logoutButton.addEventListener('click', () => {
   logout()
+})
+
+homeButton.addEventListener('click', () => {
+  location.replace("#main")
+  menu.style.display = "none";
+})
+
+searchButton.addEventListener('click', () => {
+  location.replace("#search")
+  menu.style.display = "none";
 })
