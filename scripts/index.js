@@ -25,6 +25,11 @@ homeButton.addEventListener('click', () => {
   menu.style.display = "none";
 })
 
+searchQuickAccess.addEventListener('click', () => {
+  location.replace("#search")
+  menu.style.display = "none";
+})
+
 searchButton.addEventListener('click', () => {
   location.replace("#search")
   menu.style.display = "none";
