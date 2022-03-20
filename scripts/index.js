@@ -3,6 +3,7 @@ const routes = [
   new Route("#register", "pages/register.html", `scripts/registerPage.js`),
   new Route("#main", "pages/main.html", `scripts/mainPage.js`),
   new Route("#search", "pages/search.html", `scripts/searchPage.js`),
+  new Route("#library", "pages/library.html", `scripts/libraryPage.js`),
 ];
 
 Router.init("root", routes);
@@ -34,3 +35,4 @@ searchButton.addEventListener('click', () => {
   location.replace("#search")
   menu.style.display = "none";
 })
+

@@ -43,3 +43,35 @@ const createUser = async (username, email) => {
   });
   return parseHttpResponse(await res.json());
 };
+
+// add wishlist
+// remove wishlist
+// add library
+// const addToLibrary = async(title, author, cover, bookId, wishlist = false) => {
+const addToLibrary = async (book) => {
+  const {
+    book_id,
+    was_read,
+    book_image,
+    book_author,
+    book_title,
+    is_wishlist,
+    book_subject
+  } = book;
+
+  const bookDetails = await searchBookDetails(book_id)
+
+  const bookObj = new Book(
+    null,
+    book_id,
+    User.getUserInstance().email,
+    was_read || false,
+    book_image,
+    book_author,
+    book_title,
+    is_wishlist || false,
+    book_subject,
+    bookDetails.description
+  );
+};
+// remove library

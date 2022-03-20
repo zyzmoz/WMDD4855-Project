@@ -1,0 +1,3 @@
+let library = []
+
+libraryOutput.innerHTML
