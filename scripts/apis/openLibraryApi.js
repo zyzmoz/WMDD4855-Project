@@ -29,5 +29,27 @@ const searchBookDetails = async (key) => {
     method: "GET",
   });
 
-  return (await res.json());
+  return await res.json();
+};
+
+const getTrendingBooks = async () => {
+  const res = await fetch(
+    `${apiURI}&q=first_publish_year%3A[2022%20TO%202022]&sort=new&limit=10`,
+    {
+      method: "GET",
+    }
+  );
+
+  return (await res.json()).docs;
+};
+
+const getBookSuggestions = async (subjects = "action fantasy") => {
+  const res = await fetch(
+    `${apiURI}&q=subject:${subjects}&limit=10`,
+    {
+      method: "GET",
+    }
+  );
+
+  return (await res.json()).docs;
 };

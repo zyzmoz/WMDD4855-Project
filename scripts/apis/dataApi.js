@@ -44,10 +44,7 @@ const createUser = async (username, email) => {
   return parseHttpResponse(await res.json());
 };
 
-// add wishlist
-// remove wishlist
-// add library
-// const addToLibrary = async(title, author, cover, bookId, wishlist = false) => {
+// Add to library
 const addToLibrary = async (book) => {
   const {
     book_id,
@@ -60,7 +57,7 @@ const addToLibrary = async (book) => {
   } = book;
 
   const bookDetails = await searchBookDetails(book_id)
-
+  console.log(bookDetails)
   const bookObj = new Book(
     null,
     book_id,
@@ -74,4 +71,8 @@ const addToLibrary = async (book) => {
     bookDetails.description
   );
 };
+
 // remove library
+const removeFromLibrary = async (book) => {
+  // TODO
+}

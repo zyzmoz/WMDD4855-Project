@@ -8,21 +8,26 @@
   </head>
   <body>
     <form id="searchForm">
-      <label>
-        Search
-        <input id="query" type="text" required/>
-      </label>
       <fieldset>
         <legend>Search type:</legend>
-        <input type="radio" id="title" name="searchType" value="title"/>
+        <input type="radio" id="title" name="searchType" value="title" />
         <label for="title">Title</label>
-        <input type="radio" id="author" name="searchType" value="author"/>
+        <input type="radio" id="author" name="searchType" value="author" />
         <label for="author">Author</label>
-        <input type="radio" id="subject" name="searchType" value="subject"/>
+        <input type="radio" id="subject" name="searchType" value="subject" />
         <label for="subject">Subject</label>
       </fieldset>
+      <label>
+        Search
+        <input id="query" type="text" required />
+      </label>
       <button type="submit">Search</button>
     </form>
-    <div id="searchResults"></div>
+    <section id="trendingBooks">
+    </section>
+    <section id="searchResults">
+    </section>
+    <section id="bookSuggestions">
+    </section>
   </body>
 </html>

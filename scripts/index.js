@@ -1,8 +1,8 @@
 const routes = [
   new Route("#login", "pages/login.html", `scripts/loginPage.js`),
   new Route("#register", "pages/register.html", `scripts/registerPage.js`),
-  new Route("#main", "pages/main.html", `scripts/mainPage.js`),
-  new Route("#search", "pages/search.html", `scripts/searchPage.js`),
+  // new Route("#main", "pages/main.html", `scripts/mainPage.js`),
+  new Route("#main", "pages/search.html", `scripts/searchPage.js`),
   new Route("#library", "pages/library.html", `scripts/libraryPage.js`),
 ];
 
