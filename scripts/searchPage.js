@@ -19,8 +19,9 @@
       </article>
       `;
   });
+  console.log({trendingBooksArr})
   // Change this to get the information from user data
-  const subjects = topThreeSubjects(['action', 'action', 'action', 'fantasy', 'fantasy', 'fiction', 'fiction', 'romance', 'romance', 'romance']);
+  const subjects = topThreeSubjects(['action', 'action', 'action', 'fantasy', 'fantasy', 'fiction', 'fiction', 'romance']);
   console.log(subjects.join(" "))
   const bookSuggestionsArr = await getBookSuggestions(subjects)
  
