@@ -1,8 +1,8 @@
 const routes = [
   new Route("#login", "pages/login.html", `scripts/loginPage.js`),
   new Route("#register", "pages/register.html", `scripts/registerPage.js`),
-  // new Route("#main", "pages/main.html", `scripts/mainPage.js`),
-  new Route("#main", "pages/search.html", `scripts/searchPage.js`),
+  new Route("#libraries", "pages/libraries.html", `scripts/librariesPage.js`),
+  new Route("#main", "pages/main.html", `scripts/mainPage.js`),
   new Route("#library", "pages/library.html", `scripts/libraryPage.js`),
 ];
 
@@ -26,13 +26,13 @@ homeButton.addEventListener('click', () => {
   menu.style.display = "none";
 })
 
-searchQuickAccess.addEventListener('click', () => {
-  location.replace("#search")
+libraryButton.addEventListener('click', () => {
+  location.replace("#library")
   menu.style.display = "none";
 })
 
-searchButton.addEventListener('click', () => {
-  location.replace("#search")
+librariesButton.addEventListener('click', () => {
+  location.replace("#libraries")
   menu.style.display = "none";
 })
 

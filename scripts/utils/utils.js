@@ -3,6 +3,7 @@ const parseHttpResponse = (data) => {
 };
 
 const topThreeSubjects = (subjects) => {
+  if (!subjects) return [];
   let topThree = [];
   while (topThree.length < 3) {
     const subjectsCopy = subjects;

@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+    <title>Home</title>
   </head>
   <body>
     <main>
-      <section>
-        <h2>Libraries Near By</h2>
-        <div id="map"></div>
-      </section>
+      <form id="searchForm">
+        <fieldset>
+          <input type="radio" id="title" name="searchType" value="title" />
+          <label for="title">Title</label>
+          <input type="radio" id="author" name="searchType" value="author" />
+          <label for="author">Author</label>
+          <input type="radio" id="subject" name="searchType" value="subject" />
+          <label for="subject">Subject</label>
+        </fieldset>
+        <input id="query" type="text" placeholder="Search" required />
+        <button class="button icon" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <section class="slider" id="trendingBooks"></section>
+      <section class="slider" id="searchResults"></section>
+      <section class="slider" id="bookSuggestions"></section>
     </main>
   </body>
 </html>

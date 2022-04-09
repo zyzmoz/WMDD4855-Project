@@ -1,7 +1,10 @@
-// Setup header
-document.querySelector("header").style.display = "none";
-
-loginForm.addEventListener('submit', (e) => {
+loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  login(email.value, password.value)
-})
+  const { error } = await login(email.value, password.value).catch((error) => ({
+    error,
+  }));
+
+  if (error) {
+    registerError.innerHTML = error.message;
+  }
+});

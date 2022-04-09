@@ -1,5 +1,4 @@
 class Book {
-  book = {};
   constructor(
     _id,
     book_id,
@@ -13,21 +12,18 @@ class Book {
     book_synopsis
   ) {
     if (_id) {
-      this.book["_id"] = _id;
+      this._id = _id;
     }
 
-    this.book = {
-      ...this.book,
-      book_id,
-      user_id,
-      was_read,
-      book_image,
-      book_author,
-      book_title,
-      is_wishlist,
-      book_subject,
-      book_synopsis,
-    };
+    this.book_id = book_id;
+    this.user_id = user_id;
+    this.was_read = was_read;
+    this.book_image = book_image;
+    this.book_author = book_author;
+    this.book_title = book_title;
+    this.is_wishlist = is_wishlist;
+    this.book_subject = book_subject;
+    this.book_synopsis = book_synopsis;
   }
 
   static toString() {
@@ -45,9 +41,7 @@ class User {
   }
 
   static getUserInstance() {
-    if (!user) {
       user = JSON.parse(localStorage.getItem("currentUser"));
-    }
 
     return user;
   }

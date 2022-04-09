@@ -1,3 +1,166 @@
+body {
+  background-color: #f8f7f2;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+  font-size: 40pt;
+  text-align: center;
+}
+
+h3 {
+  font-size: 16pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+input {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12pt;
+  padding: 0.5rem;
+  border: 1px solid #6b6969;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15pt;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.button.primary {
+  background-color: #6ad5ef;
+  color: white;
+}
+
+.button.clear {
+  background-color: transparent;
+  color: #6ad5ef;
+}
+
+.button.icon {
+  background-color: transparent;
+  color: #6b6969;
+  font-size: 18pt;
+}
+
+.button.danger {
+  background-color: #ff6961;
+  color: white;
+}
+
+
+form label {
+  padding: 0;
+  margin: 0;
+  color: #8f8e8e;
+}
+
+main {
+  padding: 1rem;
+}
+
+.slider {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.auth-form label {
+  font-size: 10pt;
+}
+
+fieldset, fieldset input {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+}
+
+.book-card {
+  position: relative;
+  width: 25%;
+  max-width: 190px;
+  height: 300px;
+  margin-right: 0.5rem;
+}
+
+.book-card img {
+  width: 190px;
+  height: 300px;
+  background-color: #bfe5ee;
+}
+
+.book-card div > h4, .book-card div > b {
+  background-color: #6b6969;
+  padding: 0;
+  margin: 0;
+  color: #f2f2f2;
+  display: block;
+  padding: 0.2rem;
+}
+
+.book-card div > b {
+  font-size: 10pt;
+}
+
+.book-card > div.title {
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(107, 105, 105, 0.6); */
+}
+
+.book-card > div.actions {
+  position: absolute;  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+
+  /* background-color: rgba(107, 105, 105, 0.6); */
+}
+
+.book-card > div.actions > button:first-child {
+  margin-bottom: 00.5rem;
+}
+
+.book-card > div.actions > button {
+  width: calc(100% - 1rem);
+  font-size: 10pt;
+}
+
+
+/* 
+font-family: 'DM Serif Display', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+
+
+*/
+
 .lds-roller {
   visibility: hidden;
   display: flex;
@@ -95,22 +258,23 @@ body {
 }
 
 header {
-  background-color: teal;
-  height: 60px;
+  background-color: #bfe5ef;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
 }
 
-header nav {
-  /* visibility: hidden; */
+
+header nav {  
   display: none;
   position: absolute;
   width: 100%;
   top: 60px;
   left: 0;
-  background-color: rgba(0, 128, 128, 0.8);
-  color: white;
+  background-color: #bfe5ef;
+  color: #6b6969;
   transition: height 0.5s linear 0.5s;
   z-index: 9999;
 }
@@ -121,7 +285,7 @@ header nav ul {
 
 header nav ul li {
   padding: 1.5rem 1rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #6b6969;
   cursor: pointer;
 }
 
@@ -140,12 +304,10 @@ header nav ul li {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 1rem;
 }
 
-#mobileMenu,
-#searchQuickAccess {
-  color: white;
+#mobileMenu {
+  color: #6b6969;
   font-size: 2em;
   padding: 1rem;
 }
@@ -155,7 +317,7 @@ header nav ul li {
 }
 
 #map {
-  height: 40vh;
+  height: 60vh;
   /* border-radius: 8px;
   box-shadow: 2px 2px 6px #999; */
 }
@@ -165,6 +327,7 @@ header nav ul li {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: center;
+  padding: 0;
 }
 
 .landing section:first-child {

@@ -44,12 +44,14 @@ const getTrendingBooks = async () => {
 };
 
 const getBookSuggestions = async (subjects = "action fantasy") => {
-  const res = await fetch(
-    `${apiURI}&q=subject:${subjects}&limit=10`,
-    {
-      method: "GET",
-    }
-  );
+  let url = `${apiURI}&q=subject:${subjects}&limit=10`;
+  if (subjects.join("") === "") {
+    url = `${apiURI}&q=subject:action fantasy&limit=10`;
+  }
+  
+  const res = await fetch(url, {
+    method: "GET",
+  });
 
   return (await res.json()).docs;
 };
